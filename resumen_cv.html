@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Víctor Hugo Juárez Tapia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .resume-container {
+            width: 210mm;
+            max-width: 100%;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            padding: 20mm;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header h2 {
+            font-size: 1em;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 0.9em;
+            color: #6b7280;
+            word-wrap: break-word;
+        }
+
+        .header a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px auto;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section h3 {
+            font-size: 1em;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .section p,
+        .section ul {
+            line-height: 1.5;
+            color: #4b5563;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .job {
+            background: #f9fafb;
+            padding: 4px 8px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+        }
+
+        .job h4 {
+            margin-bottom: 2px;
+            font-size: 0.98em;
+            color: #1f2937;
+        }
+
+        .job span {
+            font-size: 0.85em;
+            color: #6b7280;
+        }
+
+        .job ul {
+            margin-top: 3px;
+            padding-left: 18px;
+        }
+
+        .job li {
+            font-size: 0.9em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skills .skill {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .skill.category {
+            background-color: #3b82f6;
+        }
+
+        .skill.db {
+            background-color: #10b981;
+        }
+
+        .skill.devops {
+            background-color: #f59e0b;
+        }
+
+        .skill.methodology {
+            background-color: #8b5cf6;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        }
+
+        /* IMPRESION */
+        @media print {
+            .download-btn {
+                display: none;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                width: 100%;
+                padding: 0;
+            }
+
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            /* Habilidades técnicas impresión */
+            .skills {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+            }
+
+            .skills .skill {
+                display: block;
+                padding: 4px;
+                font-size: 0.85em;
+                text-align: center;
+                color: #000 !important;
+                background: none !important;
+                border: 1px solid #000;
+                border-radius: 4px;
+                margin: 0;
+            }
+        }
+
+        /* RESPONSIVO */
+        @media screen and (max-width:768px) {
+            .resume-container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header h2 {
+                font-size: 0.9em;
+            }
+
+            .photo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 10px;
+            }
+
+            .job {
+                padding: 4px 6px;
+            }
+
+            .job h4 {
+                font-size: 0.95em;
+            }
+
+            .job span {
+                font-size: 0.8em;
+            }
+
+            .job li {
+                font-size: 0.85em;
+            }
+
+            .skills .skill {
+                font-size: 0.75em;
+                padding: 3px 8px;
+            }
+
+            .section h3 {
+                font-size: 0.95em;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            .header h2 {
+                font-size: 0.85em;
+            }
+
+            .photo {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 8px;
+            }
+
+            .job {
+                padding: 4px 6px;
+            }
+
+            .job h4 {
+                font-size: 0.9em;
+            }
+
+            .job span {
+                font-size: 0.75em;
+            }
+
+            .job li {
+                font-size: 0.8em;
+            }
+
+            .skills .skill {
+                font-size: 0.7em;
+                padding: 2px 6px;
+            }
+
+            .section h3 {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container" id="resume">
+        <div class="header">
+            <div class="photo"><img src="assets/cvFoto.jpg" alt="Foto Victor Hugo Juárez Tapia"></div>
+            <h1>Victor Hugo Juárez Tapia</h1>
+            <h2>Desarrollador Full Stack | +11 años de experiencia</h2>
+            <p>📧 v.t.juarez@outlook.com | 📱 2221902964 | 🌐 <a href="#">GitHub</a> / <a href="#">LinkedIn</a></p>
+        </div>
+
+        <div class="section">
+            <h3>🎯 Perfil Profesional</h3>
+            <p>Ingeniero en Sistemas con más de 11 años de experiencia en desarrollo full stack. Especialista en .NET,
+                Angular y arquitecturas de microservicios, con sólida trayectoria en optimización de procesos,
+                despliegue en la nube (AWS, Docker) y metodologías DevOps. Experiencia en sectores financiero,
+                gubernamental y entretenimiento, entregando soluciones escalables y de alto impacto.</p>
+        </div>
+
+        <div class="section">
+            <h3>💼 Experiencia Profesional</h3>
+
+            <div class="job">
+                <h4>Northware – Monterrey</h4>
+                <span>Desarrollador Full Stack | 2020 – Actualidad</span>
+                <ul>
+                    <li>Diseñé e implementé una aplicación para gestión de siniestros, permitiendo la carga y
+                        visualización de archivos PDF en un repositorio seguro.</li>
+                    <li>Mejoré la eficiencia de consulta de documentos en un 30%, reduciendo tiempos de respuesta para
+                        usuarios internos.</li>
+                    <li>Tecnologías: .NET 6, .NET Core 3.1, Angular 13, SQL Server, IIS.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>SYE Software – Ciudad de México</h4>
+                <span>Desarrollador Full Stack | 2018 – 2020</span>
+                <ul>
+                    <li>Desarrollé microservicios para el proyecto de controles volumétricos del SAT, mejorando la
+                        trazabilidad de datos fiscales.</li>
+                    <li>Implementé prácticas DevOps (CI/CD con Jenkins, Docker, Openshift), reduciendo los tiempos de
+                        despliegue en un 40%.</li>
+                    <li>Tecnologías: .NET Framework, .NET Core, C#, Angular 10, SQL Server, AWS, Jenkins, Docker.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>Globalox – Puebla</h4>
+                <span>Desarrollador Full Stack | 2018</span>
+                <ul>
+                    <li>Desarrollé y mantuve aplicaciones de venta de boletos en línea (Taquilla Cero), soportando
+                        transacciones de alto volumen.</li>
+                    <li>Implementé microservicios para pagos y una VPN IPSEC para integraciones con OXXO.</li>
+                    <li>Tecnologías: PHP, MySQL, YII, NodeJS, VB .NET, Docker, AWS.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>Gnobit – Puebla</h4>
+                <span>Desarrollador Full Stack | 2016 – 2018</span>
+                <ul>
+                    <li>Lideré la migración de sistemas de escritorio .NET a aplicaciones web con código abierto,
+                        reduciendo costos de licenciamiento.</li>
+                    <li>Tecnologías: PHP, Laravel, Angular, NodeJS, MySQL, Git, Digital Ocean.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>Doertibusiness – Puebla</h4>
+                <span>Desarrollador Junior | 2013 – 2016</span>
+                <ul>
+                    <li>Desarrollé módulos de facturación web y aplicaciones de escritorio para transporte y retail.
+                    </li>
+                    <li>Tecnologías: .NET, PHP, Java, SQL Server, PostgreSQL.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🛠️ Habilidades Técnicas</h3>
+            <div class="skills">
+                <span class="skill category">C#</span>
+                <span class="skill category">Java</span>
+                <span class="skill category">PHP</span>
+                <span class="skill category">NodeJS</span>
+                <span class="skill category">Angular</span>
+                <span class="skill category">Laravel</span>
+                <span class="skill category">.NET 6</span>
+                <span class="skill category">.NET Core</span>
+                <span class="skill db">SQL Server</span>
+                <span class="skill db">MySQL</span>
+                <span class="skill db">PostgreSQL</span>
+                <span class="skill devops">Docker</span>
+                <span class="skill devops">Jenkins</span>
+                <span class="skill devops">AWS</span>
+                <span class="skill devops">Openshift</span>
+                <span class="skill devops">SonarQube</span>
+                <span class="skill devops">Nexus</span>
+                <span class="skill methodology">Scrum</span>
+                <span class="skill methodology">CI/CD</span>
+                <span class="skill methodology">Microservicios</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🌍 Idiomas</h3>
+            <ul>
+                <li>Español: Nativo</li>
+                <li>Inglés: Nivel A1</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>🎓 Educación</h3>
+            <ul>
+                <li>Ingeniería en Sistemas Computacionales - Instituto de Estudios Superiores de América del Norte</li>
+            </ul>
+        </div>
+
+        <button class="download-btn" onclick="window.print()">Imprimir Página</button>
+    </div>
+
+</body>
+
+</html>
